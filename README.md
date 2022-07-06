@@ -1,3 +1,3 @@
 # BlogDjango
 Blog in Django about sport, food ...
-## Блог находится в стадии разработки
+## Блог о спорте и еде.
