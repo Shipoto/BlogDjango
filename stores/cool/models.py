@@ -14,7 +14,6 @@ class Blogs(models.Model):
     def get_absolute_url(self):
         return reverse('view_blogs', kwargs={"pk": self.pk})
 
-
     def __str__(self):
         return self.title
 
@@ -22,6 +21,7 @@ class Blogs(models.Model):
         verbose_name = 'Запись'
         verbose_name_plural = 'Записи'
         ordering = ['-created_at']
+
 
 class Category(models.Model):
     title = models.CharField(max_length=100, db_index=True, verbose_name='Наименование категории')
@@ -36,5 +36,3 @@ class Category(models.Model):
         verbose_name = 'Категория'
         verbose_name_plural = 'Категории'
         ordering = ['title']
-
-
