@@ -35,8 +35,6 @@ class BlogsByCategory(ListView):
 class ViewBlogs(DetailView):
     model = Blogs
     context_object_name = 'blogs_item'
-    # template_name = 'cool/home_detail.html'
-    # pk_url_kwarg = 'blogs_id'
 
 
 class CreateBlog(CreateView):

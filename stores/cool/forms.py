@@ -1,6 +1,7 @@
+import re
+
 from django import forms
 from .models import Blogs
-import re
 from django.core.exceptions import ValidationError
 
 
