@@ -6,42 +6,48 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('cool', '0001_initial'),
+        ("cool", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='blogs',
-            options={'ordering': ['-created_at'], 'verbose_name': 'Запись', 'verbose_name_plural': 'Записи'},
+            name="blogs",
+            options={
+                "ordering": ["-created_at"],
+                "verbose_name": "Запись",
+                "verbose_name_plural": "Записи",
+            },
         ),
         migrations.AlterField(
-            model_name='blogs',
-            name='content',
-            field=models.TextField(blank=True, verbose_name='Контент'),
+            model_name="blogs",
+            name="content",
+            field=models.TextField(blank=True, verbose_name="Контент"),
         ),
         migrations.AlterField(
-            model_name='blogs',
-            name='created_at',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Создано'),
+            model_name="blogs",
+            name="created_at",
+            field=models.DateTimeField(auto_now_add=True, verbose_name="Создано"),
         ),
         migrations.AlterField(
-            model_name='blogs',
-            name='is_published',
-            field=models.BooleanField(default=True, verbose_name='Опубликовано'),
+            model_name="blogs",
+            name="is_published",
+            field=models.BooleanField(default=True, verbose_name="Опубликовано"),
         ),
         migrations.AlterField(
-            model_name='blogs',
-            name='photo',
-            field=models.ImageField(blank=True, upload_to='photos/%Y/%m/%d/', verbose_name='Фото'),
+            model_name="blogs",
+            name="photo",
+            field=models.ImageField(
+                blank=True, upload_to="photos/%Y/%m/%d/", verbose_name="Фото"
+            ),
         ),
         migrations.AlterField(
-            model_name='blogs',
-            name='title',
-            field=models.CharField(max_length=100, verbose_name='Наименование'),
+            model_name="blogs",
+            name="title",
+            field=models.CharField(max_length=100, verbose_name="Наименование"),
         ),
         migrations.AlterField(
-            model_name='blogs',
-            name='updated_at',
-            field=models.DateTimeField(auto_now=True, verbose_name='Обновлено'),
+            model_name="blogs",
+            name="updated_at",
+            field=models.DateTimeField(auto_now=True, verbose_name="Обновлено"),
         ),
     ]
